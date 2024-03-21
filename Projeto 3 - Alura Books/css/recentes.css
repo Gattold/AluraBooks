@@ -1,0 +1,43 @@
+.recentes {
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+}
+
+.recentes__titulo {
+    padding: 2em 0 1em;
+    color: var(--branco-primario);
+    text-align: center;
+    font-weight: 300;
+}
+
+.recentes__aulas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0 2em;
+    gap: 1em;
+
+}
+
+.recentes__aulas--topicos {
+    padding: 1em;
+    background: var(--laranja-primario);
+    color: var(--branco-primario);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .recentes__titulo {
+        font-size: 24px;
+    }
+    .recentes__aulas--topicos {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .recentes {
+        padding: 1em 25vw;
+    }
+}

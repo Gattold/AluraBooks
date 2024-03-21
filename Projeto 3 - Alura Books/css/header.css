@@ -1,0 +1,113 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--branco-primario);
+    position: relative;
+}
+
+.cabecalho__container {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 1.5em;
+}
+
+.cabecalho__container--menu {
+    background-image: url("../img/Menu.svg");
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+
+}
+
+.cabecalho__container--lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 60vw;
+
+}
+
+.cabecalho__container--botao:checked~.cabecalho__container--lista-menu {
+    display: block;
+}
+
+.cabecalho__container--lista-menu-titulo, .cabecalho__container--lista-menu-item {
+    background-color: var(--branco-primario);
+    padding: 1em;
+}
+
+.cabecalho__container--lista-menu-titulo {
+    color: var(--laranja-primario);
+    font-weight: 700;
+}
+
+.cabecalho__container--lista-menu-link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.cabecalho__container--botao, .cabecalho__container--alura, .cabecalho__container--opcoes {
+    display: none;
+}
+
+.cabecalho__container--texto {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__container--alura, .cabecalho__container--alura-negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+    .cabecalho__container--alura {
+        font-weight: 400;
+        display: block;
+    }
+    .cabecalho__container--alura-negrito {
+        font-weight: 700;
+    }
+    .cabecalho__container--opcoes {
+        display: flex;
+        align-items: center;
+    }
+    .cabecalho__container--opcoes-item {
+        padding: 1em;
+        text-transform: uppercase;
+    }
+    .cabecalho__container--opcoes-link {
+        text-decoration: none;
+        color: var(--preto-primario);
+    }
+    .cabecalho__container--transparente, .cabecalho__container--menu, .cabecalho__container--categoria{
+        display: none;
+    }
+    .cabecalho__container--categoria:checked~.cabecalho__container--lista-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho__container--link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto-primario);
+    }
+    .cabecalho__container--texto {
+        margin-left: 1em;
+    }
+    .cabecalho {
+        padding: 0 2em;
+    }
+    .cabecalho__container--opcoes {
+        margin-right: auto;
+    }
+    .cabecalho__container--texto {
+        display: block;
+    }
+}

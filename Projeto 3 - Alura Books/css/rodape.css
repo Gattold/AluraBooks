@@ -1,0 +1,49 @@
+.rodape {
+    margin-top: 0.2em;
+    padding: 1em;
+    background: var(--branco-primario);
+}
+
+.rodape__texto {
+    color: #000000;
+    margin-left: 1em;
+}
+
+.rodape {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .rodape {
+        display: flex;
+        justify-content: space-around;
+    }
+    .rodape__educacao--link {
+        text-decoration: none;
+        color: var(--cinza-primario);
+        margin-left: 0.5em;
+    }
+    .rodape__educacao--lista {
+        display: flex;
+        align-items: center;
+        margin: 0.5em 0;
+    }
+    .rodape__educacao--titulo {
+        color: var(--cinza-secundario);
+        font-size: 14px;
+    }
+    .rodape__texto {
+        font-size: 24px;
+
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .rodape__educacao {
+        border-left: 1px solid var(--cinza-primario);
+        padding-left: 1em;
+    }
+    .rodape {
+        padding: 3em 0;
+    }
+}
